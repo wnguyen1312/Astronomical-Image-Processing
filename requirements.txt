@@ -1,0 +1,13 @@
+# For FITS files and astronomical data handling
+astropy
+
+# For source detection and aperture photometry
+photutils
+
+# For math and scientific constants
+scipy
+numpy
+
+# For plotting and color cycles
+matplotlib
+cycler
