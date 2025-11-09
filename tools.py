@@ -55,3 +55,23 @@ def mask_circle(mask, center, radius):
     circle_mask = (xx - x0)**2 + (yy - y0)**2 <= radius**2
     mask[circle_mask] = False
     return mask
+
+def mask_ellipse(mask, center, radii, angle=0):
+    """
+    Create an elliptical mask on a 2D boolean array.
+    """
+    x0, y0 = center
+    rx, ry = radii
+    yy, xx = np.ogrid[:mask.shape[0], :mask.shape[1]]
+
+    # Convert to radians
+    theta = np.deg2rad(angle)
+
+    # Rotate coordinates
+    x_rot = (xx - x0) * np.cos(theta) + (yy - y0) * np.sin(theta)
+    y_rot = -(xx - x0) * np.sin(theta) + (yy - y0) * np.cos(theta)
+
+    # Ellipse equation
+    ellipse_mask = (x_rot / rx) ** 2 + (y_rot / ry) ** 2 <= 1
+    mask[ellipse_mask] = False
+    return mask
