@@ -1,4 +1,4 @@
-# Computational Lab Project: Astronomical Image Processing  
+# Astronomical Image Processing  
 **Authors:** William Nguyen & Linh Nguyen  
 
 ## Overview  
