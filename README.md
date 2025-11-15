@@ -11,5 +11,5 @@ Clone this repository and install the required dependencies:
 git clone https://github.com/wnguyen1312/Astronomical-Image-Processing.git
 cd Astronomical-Image-Processing
 pip install -r requirements.txt
-
+```
 [![astropy](http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat)](http://www.astropy.org/)
